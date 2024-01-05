@@ -1,23 +1,27 @@
-#include <stdio.h>
+import java.util.Scanner;
 
-int main() {
-    // Declare variables to store the numbers
-    int num1, num2, sum;
+public class AddTwoNumbers {
+    public static void main(String[] args) {
+        // Create a Scanner object to get input from the user
+        Scanner scanner = new Scanner(System.in);
 
-    // Get input from the user
-    printf("Enter first number: ");
-    scanf("%d", &num1);
+        // Declare variables to store the numbers
+        int num1, num2, sum;
+        System.out.print("Enter first number: ");
+        num1 = scanner.nextInt();
 
-    printf("Enter second number: ");
-    scanf("%d", &num2);
+        System.out.print("Enter second number: ");
+        num2 = scanner.nextInt();
 
-    // Add the numbers
-    sum = num1 + num2;
+        // Add the numbers
+        sum = num1 + num2;
 
-    // Display the result
-    printf("Sum: %d\n", sum);
+        // Display the result
+        System.out.println("Sum: " + sum);
 
-    return 0;
+        // Close the scanner to avoid resource leak
+        scanner.close();
+    }
 }
 
 
